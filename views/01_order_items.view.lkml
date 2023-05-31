@@ -39,7 +39,8 @@ view: order_items {
     filters:
     {field:created_date
       value: "28 days"
-    }}
+    }
+  }
 
   measure: order_count {
     view_label: "Orders"
@@ -211,6 +212,13 @@ view: order_items {
     type: number
     sql: CAST(FLOOR(TIMESTAMP_DIFF(${created_raw}, ${users.created_raw}, DAY)/30) AS INT64) ;;
   }
+
+  dimension_group: since_signing_up {
+    type: duration
+    sql_start: ${users.created_raw} ;;
+    sql_end: ${created_raw} ;;
+  }
+
 
 ########## Logistics ##########
 
