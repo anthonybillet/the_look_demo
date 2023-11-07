@@ -25,6 +25,10 @@ access_grant: can_see_gross_margin {
 }
 
 explore: order_items {
+  access_filter: {
+    field: products.brand
+    user_attribute: brand
+  }
   label: "(1) Orders, Items and Users"
   view_name: order_items
 
