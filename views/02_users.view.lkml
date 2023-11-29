@@ -27,7 +27,7 @@ view: users {
     when ${city}='Chicago' then 'UK'
     when ${city}='Houston' then 'Spain'
     when ${city}='Philadelphia' then 'Italy'
-    when ${city}='San Antonio' then 'Netherlans'
+    when ${city}='San Antonio' then 'Netherlands'
     when ${city}='Phoenix' then 'Austria'
     when ${city}='San Diego' then 'Poland'
     when ${city}='Dallas' then 'Belgium'
