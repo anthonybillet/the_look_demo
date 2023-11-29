@@ -32,7 +32,7 @@ view: users {
     when ${city}='San Diego' then 'Poland'
     when ${city}='Dallas' then 'Belgium'
     when ${city}='Columbus' then 'Portugal'
-    else 'Other' end
+    else 'United States' end
  ;;
   }
 
