@@ -18,24 +18,6 @@ view: users {
 
   }
 
-  dimension: country_2{
-    type: string
-    map_layer_name: countries
-    sql: case
-    when ${city}='New York' then 'France'
-    when ${city}='Los Angeles' then 'Germany'
-    when ${city}='Chicago' then 'UK'
-    when ${city}='Houston' then 'Spain'
-    when ${city}='Philadelphia' then 'Italy'
-    when ${city}='San Antonio' then 'Netherlands'
-    when ${city}='Phoenix' then 'Austria'
-    when ${city}='San Diego' then 'Poland'
-    when ${city}='Dallas' then 'Belgium'
-    when ${city}='Columbus' then 'Portugal'
-    else 'United States' end
- ;;
-  }
-
   dimension: last_name {
     label: "Last Name"
     hidden: yes

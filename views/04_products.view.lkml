@@ -112,11 +112,6 @@ view: products {
     }
   }
 
-  dimension: merchant {
-    type: string
-    sql: ${brand} ;;
-  }
-
   dimension: retail_price {
     label: "Retail Price"
     type: number
