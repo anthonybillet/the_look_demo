@@ -4,7 +4,7 @@ include: "/queries/queries*.view" # includes all queries refinements
 include: "/views/**/*.view" # include all the views
 include: "/dashboards/*.dashboard.lookml" # include all the views
 
-############ Model Configuration #############
+############ Model Configuration ##############
 
 datagroup: ecommerce_etl {
   sql_trigger: SELECT max(created_at) FROM ecomm.events ;;
@@ -25,6 +25,10 @@ access_grant: can_see_gross_margin {
 }
 
 explore: order_items {
+  access_filter: {
+    field: products.brand
+    user_attribute: brand
+  }
   label: "(1) Orders, Items and Users"
   view_name: order_items
 

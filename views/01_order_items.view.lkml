@@ -31,6 +31,8 @@ view: order_items {
     drill_fields: [detail*]
   }
 
+
+
   measure: count_last_28d {
     label: "Count Sold in Trailing 28 Days"
     type: count_distinct
